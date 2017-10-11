@@ -142,7 +142,7 @@ Thing+ Cloud 와 하드웨어를 연동해 센서 데이터를 송수신하기 �
 #### Thing+ REST API 로 API 키 발급받기
  주의 : 이 방식을 사용하기 위해서는 vendorKey 가 필요합니다. vendorKey 는 contact@thingplus.net 에 요청하시면 발급받을 수 있습니다.
 
-[Thing+ REST API 를 이용해 'API 키'를 발급받아 등록하시려면 이 문서를 참조하십시오.](https://thingplus.api-docs.io/2.0/non-rest-apis/registergatewaykey)
+[Thing+ REST API 를 이용해 `API 키`를 발급받아 등록하시려면 이 문서를 참조하십시오.](https://thingplus.api-docs.io/2.0/non-rest-apis/registergatewaykey)
 
 ## 고맙습니다!
 Thing+ REST API 연동에 적극적으로 참여하고 관심을 가져주셔서 감사합니다.
