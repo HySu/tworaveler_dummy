@@ -1,17 +1,17 @@
 # Thing+ REST API
 
 ## 개요
-Thing+ REST API 는 누구나 OAuth client 를 등록하고 AccessToken을 획득하여 Gateway 와 Device / Sensor 를 등록하고 Thing+ 서비스를 사용할 수 있게 합니다.
+Thing+ REST API 는 누구나 OAuth client 를 등록하고 AccessToken을 획득하여 Gateway / Device / Sensor 를 등록하고 Thing+ 서비스를 사용할 수 있게 합니다.
 
 Thing+ Cloud 는 사용자 정보와 서비스를 관리하고 센서 데이터를 제공합니다.
 
-또한 사용자는 Thing+ Portal 에서 API 키를 발급하여 하드웨어에 Gateway 를 설치하고 Thing+ Cloud 에 센서 데이터를 송수신하도록 합니다.
+또한 사용자는 Thing+ Portal 에서 API 키를 발급하고 하드웨어에 세팅하여 Thing+ Cloud 에 센서 데이터를 송수신하도록 합니다.
 
 Thing+ REST API 를 사용하려면 다음 조건을 충족해야합니다.
 * OAuth client 등록
 * AccessToken 획득
 * API 키 발급
-* 하드웨어에 Gateway 설치
+* 하드웨어에 API 키 세팅
 * Gateway / Device / Sensor 등록
 
 ### 중요 공지
@@ -26,7 +26,7 @@ Thing+ Supporter 는 Thing+ Portal 과 Thing+ REST API 를 이용한 등록과�
 
 ### 선결 요건
 시작하기 전에 다음이 필요합니다.
-* [https://thingplus.net](https://thingplus.net) 회원가입. Thing+ 는 개인 사용자를 위한 무료 계정 생성과 비즈니스 고객을 위한 계정 생성을 지원합니다.
+* [Thing+ Portal](https://thingplus.net) 회원가입. Thing+ 는 개인 사용자를 위한 무료 계정 생성과 비즈니스 고객을 위한 계정 생성을 지원합니다.
 
 ### OAuth client 등록
 첫 번째 단계는 Thing+ Cloud 에 OAuth client 를 등록하는 것입니다. 다음이 필요합니다:
@@ -130,26 +130,19 @@ Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI3MzY3
 
 [이 과정에서 문제가 발생하면 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#authorization-code-grant-or-web-server)
 
-### API 키 발급
-하드웨어에 Gateway 설치를 위해 [Thing+ Portal](https://iot.thingplus.net) 에서 `API 키`를 발급 받아야합니다.
+### Gateway / Device / Sensor 등록하기
+Thing+ Cloud 와 하드웨어를 연동해 센서 데이터를 송수신하기 위해 `API 키` 를 발급받고, 발급받은 `API 키` 를 하드웨어에 등록해야합니다. 이를 위해 다음 지침을 따르십시오.
 
+[Thing+ Portal](https://iot.thingplus.net) 에서 `API 키`를 발급 받거나, Thing+ REST API 를 이용해 `API 키` 를 발급받을 수 있습니다. 이 과정을 위해 다음을 필요로합니다:
+* 하드웨어 GatewayId 또는 vendorKey
 
-### 하드웨어에 Gateway 설치
+#### Thing+ Portal 에서 API 키 발급받아 Gateway / Device / Sensor 등록하기
+[Thing+ Portal 에서 `API 키`를 발급받아 등록하시려면 이 문서를 참조하십시오.](http://support.thingplus.net/ko/user-guide/registration.html)
 
-### Gateway 등록
+#### Thing+ REST API 로 API 키 발급받기
+ 주의 : 이 방식을 사용하기 위해서는 vendorKey 가 필요합니다. vendorKey 는 contact@thingplus.net 에 요청하시면 발급받을 수 있습니다.
 
-### Device / Sensor 등록
+[Thing+ REST API 를 이용해 'API 키'를 발급받아 등록하시려면 이 문서를 참조하십시오.](https://thingplus.api-docs.io/2.0/non-rest-apis/registergatewaykey)
 
 ## 고맙습니다!
 Thing+ REST API 연동에 적극적으로 참여하고 관심을 가져주셔서 감사합니다.
-
-[Thing+ 용어설명](https://github.com/daliworks/thingplus-guide/blob/master/doc/README_kr.md)
-
-[HTTPS와 OAuth2를 이용한 Thing+ 연동 가이드](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStartedWithHttpsAndOauth.md)
-[Getting Started with the Thing+ REST APIs](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStarted_authToken.md)
-[OAuth2](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md)
-[Thing+ OAuth2 가이드?](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2Guide_kr.md)
-[Intro](https://github.com/daliworks/thingplus-guide/blob/master/doc/intro_kr.md)
-[Thing+ 게이트웨이 등록 가이드](https://github.com/daliworks/thingplus-guide/blob/master/doc/registerGateway_kr.md)
-
-[Sensor Types](https://github.com/daliworks/thingplus-guide/blob/master/doc/SensorTypes_kr.md)
