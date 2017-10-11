@@ -133,9 +133,6 @@ Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI3MzY3
 ### Gateway / Device / Sensor 등록하기
 Thing+ Cloud 와 하드웨어를 연동해 센서 데이터를 송수신하기 위해 `API 키` 를 발급받고, 발급받은 `API 키` 를 하드웨어에 등록해야합니다. 이를 위해 다음 지침을 따르십시오.
 
-[Thing+ Portal](https://iot.thingplus.net) 에서 `API 키`를 발급 받거나, Thing+ REST API 를 이용해 `API 키` 를 발급받을 수 있습니다. 이 과정을 위해 다음을 필요로합니다:
-* 하드웨어 GatewayId 또는 vendorKey
-
 #### Thing+ Portal 에서 API 키 발급받아 Gateway / Device / Sensor 등록하기
 [Thing+ Portal 에서 `API 키`를 발급받아 등록하시려면 이 문서를 참조하십시오.](http://support.thingplus.net/ko/user-guide/registration.html)
 
