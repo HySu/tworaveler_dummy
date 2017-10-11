@@ -64,23 +64,24 @@ Body 예시
 #### Authorization Code 부여
 AccessToken 을 획득하기 위해 Authorization Code 가 필요합니다. 아래 지침을 따르십시오.
 
-웹 브라우저로 아래 URL 을 get 하여 redirect_uri 에 부여된 Authorization 코드를 획득 합니다.
+웹 브라우저로 아래 URL 을 get 하여 수락 후 redirect_uri 에 Query에 부여된 Authorization 코드를 획득 합니다.
+
+```
+GET URL : https://api.thingplus.net/v2/oauth2/authorize?client_id={CLIENT_ID}&response_type=code&redirect_uri={REDIRECT_URI}
+Example : https://api.thingplus.net/v2/oauth2/authorize?client_id=daliworks512&response_type=code&redirect_uri=https://thingplus.net
+```
 
 URL Query 파라미터
 ```
 client_id : (필수) 등록한 OAuth client reqId
 response_type : (필수) "code" 를 사용
 redirect_uri : (필수) Authorization Code 와 함께 redirect 될 URI
-
 ```
 
-> 상용 서버
-```
-GET URL : https://api.thingplus.net/v2/oauth2/authorize
-Example : https://api.thingplus.net/v2/oauth2/authorize?client_id=daliworks512&response_type=code&redirect_uri=https://thingplus.net
+사용자가 요청을 수락하면 URL 에 "code" 가 포함된 redirect_uri 사이트로 리디렉션됩니다.
 ```
 
-
+```
 
 #### AccessToken 획득
 Postman 에서 다음 API를 이용하여 AccessToken 을 획득합니다.
