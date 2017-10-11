@@ -61,14 +61,14 @@ Body 예시
 [scopes 범위는 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes)
 
 ### AccessToken 획득
-OAuth2 AccessToken 획득을 위해 Authorization Code Grant(or Web Server) 또는 Resource Owner Password Credentials Grant 방식을 사용할 수 있습니다. 이 문서에서는 Authorization Code Grant 로 AccessToken 을 획득합니다.
+OAuth2 AccessToken 획득을 위해 Authorization Code Grant(or Web Server) 또는 Resource Owner Password Credentials Grant 방식을 사용할 수 있습니다. 이 문서에서는 Authorization Code Grant 로 `AccessToken` 을 획득합니다.
 
 [좀 더 자세히 알아보려면 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md)
 
 #### Authorization Code 부여
-AccessToken 을 획득하기 위해 Authorization Code 가 필요합니다. 아래 지침을 따르십시오.
+`AccessToken` 을 획득하기 위해 `Authorization Code` 가 필요합니다. 아래 지침을 따르십시오.
 
-웹 브라우저로 아래 URL 을 get 하여 수락 후 redirect_uri 에 Query에 부여된 Authorization 코드를 획득 합니다.
+웹 브라우저로 아래 URL 을 get 하여 수락 후 redirect_uri 에 Query에 부여된 `Authorization Code` 를 획득 합니다.
 
 ```
 GET URL : https://api.thingplus.net/v2/oauth2/authorize?client_id={CLIENT_ID}&response_type=code&redirect_uri={REDIRECT_URI}
@@ -90,7 +90,7 @@ Example : https://thingplus.net/?code=FKr1INPriNvGcMEC
 
 
 #### AccessToken 획득
-Postman 에서 다음 API를 이용하여 AccessToken 을 획득합니다.
+Postman 에서 다음 API를 이용하여 `AccessToken` 을 획득합니다.
 ```
 URL : https://api.thingplus.net/v2/oauth2/token
 Method : POST
@@ -103,7 +103,7 @@ Body
  - grant_type : authorization_code
 ```
 
-x-www-form-urlencoded POST 예시
+x-www-form-urlencoded POST body 예시
 ```
 code : FKr1INPriNvGcMEC
 client_id : daliworks512
@@ -112,7 +112,7 @@ redirect_uri : https://thingplus.net
 grant_type : authorization_code
 ```
 
-획득한 access_token
+획득한 `AccessToken`
 ```
 {
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI3MzY3IiwiY2xpZW50SWQiOiJkYWxpd29ya3M1MTIiLCJpYXQiOjE1MDc3MTA4NDYsImV4cCI6MTUwOTAwNjg0Nn0.wmr6MdEDJo5qk4i5EYn34epxRmn9BQq_Nt74AfNCSMc",
@@ -120,7 +120,7 @@ grant_type : authorization_code
 }
 ```
 
-획득한 AccessToken 은 Thing+ REST API 를 호출할 때 권한 인증을 위해 Header에 있어야합니다.
+`AccessToken` 은 Thing+ REST API 를 호출할 때 권한 인증을 위해 Header에 반드시 있어야합니다.
 
 Header 에 Authorization 필드를 추가하고, token_type과 access_token 값을 아래와 같이 입력해주십시오.
 ```
@@ -130,6 +130,7 @@ Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI3MzY3
 [이 과정에서 문제가 발생하면 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#authorization-code-grant-or-web-server)
 
 ### API 키 발급
+
 
 ### 하드웨어에 Gateway 설치
 
