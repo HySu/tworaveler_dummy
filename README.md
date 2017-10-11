@@ -26,7 +26,7 @@ Thing+ Supporter 는 Thing+ Portal 과 Thing+ REST API 를 이용한 등록과�
 
 ### 선결 요건
 시작하기 전에 다음이 필요합니다.
-* [https://thingplus.net](https://thingplus.net) 회원가입. Thing+ 는 개인 사용자와 비즈니스 고객을 위한 계정 생성을 지원합니다.
+* [https://thingplus.net](https://thingplus.net) 회원가입. Thing+ 는 개인 사용자를 위한 무료 계정 생성과 비즈니스 고객을 위한 계정 생성을 지원합니다.
 
 ### OAuth client 등록
 첫 번째 단계는 Thing+ Cloud 에 OAuth client 를 등록하는 것입니다. 다음이 필요합니다:
