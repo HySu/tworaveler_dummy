@@ -1,7 +1,7 @@
 # Thing+ REST API
 
 ## 개요
-Thing+ REST API 는 누구나 OAuth client 를 등록하고 AccessToken을 획득하여 Gateway / Device / Sensor 를 등록하고 Thing+ 서비스를 사용할 수 있게 합니다.
+Thing+ REST API 는 누구나 OAuth client 를 등록하고 AccessToken을 획득하여 Gateway 와 Device / Sensor 를 등록하고 Thing+ 서비스를 사용할 수 있게 합니다.
 
 Thing+ Cloud 는 사용자 정보와 서비스를 관리하고 센서 데이터를 제공합니다.
 
@@ -61,7 +61,7 @@ Body 예시
 [scopes 범위는 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes)
 
 ### AccessToken 획득
-OAuth2 AccessToken 획득을 위해 Authorization Code Grant(or Web Server) 또는 Resource Owner Password Credentials Grant 방식을 사용할 수 있습니다. 이 문서에서는 Authorization Code Grant 로 `AccessToken` 을 획득합니다.
+OAuth2 AccessToken 획득을 위해 Authorization Code Grant(or Web Server) 로 `AccessToken` 을 획득합니다.
 
 [좀 더 자세히 알아보려면 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md)
 
@@ -112,13 +112,14 @@ redirect_uri : https://thingplus.net
 grant_type : authorization_code
 ```
 
-획득한 `AccessToken`
+획득한 `AccessToken` 예시
 ```
 {
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI3MzY3IiwiY2xpZW50SWQiOiJkYWxpd29ya3M1MTIiLCJpYXQiOjE1MDc3MTA4NDYsImV4cCI6MTUwOTAwNjg0Nn0.wmr6MdEDJo5qk4i5EYn34epxRmn9BQq_Nt74AfNCSMc",
     "token_type": "Bearer"
 }
 ```
+
 
 `AccessToken` 은 Thing+ REST API 를 호출할 때 권한 인증을 위해 Header에 반드시 있어야합니다.
 
@@ -130,11 +131,14 @@ Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI3MzY3
 [이 과정에서 문제가 발생하면 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#authorization-code-grant-or-web-server)
 
 ### API 키 발급
+하드웨어에 Gateway 설치를 위해 [Thing+ Portal](https://iot.thingplus.net) 에서 `API 키`를 발급 받아야합니다.
 
 
 ### 하드웨어에 Gateway 설치
 
-### Gateway / Device / Sensor 등록
+### Gateway 등록
+
+### Device / Sensor 등록
 
 ## 고맙습니다!
 Thing+ REST API 연동에 적극적으로 참여하고 관심을 가져주셔서 감사합니다.
