@@ -44,8 +44,9 @@ Body
  - name : 이름
  - reqId : ID(AccessToken 획득시 필요)
  - clientSecret : secret 키(AccessToken 획득시 필요)
- - scopes : 부여할 권한([scopes 범위 참조](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes))
+ - scopes : 부여할 권한
 ```
+[scopes 범위는 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes)
 
 ### AccessToken 획득
 
