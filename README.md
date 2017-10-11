@@ -105,8 +105,15 @@ Body
 
 x-www-form-urlencoded 예시
 ```
-code :
+code : FKr1INPriNvGcMEC
+client_id : daliworks512
+client_secret : gali1234
+redirect_uri : https://thingplus.net
+grant_type : authorization_code
 ```
+
+[이 과정에서 문제가 발생하면 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#authorization-code-grant-or-web-server)
+
 ### API 키 발급
 
 ### 하드웨어에 Gateway 설치
