@@ -61,6 +61,10 @@ Body 예시
 [scopes 범위는 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes)
 
 ### AccessToken 획득
+OAuth2 AccessToken 획득을 위해 Authorization Code Grant(or Web Server) 또는 Resource Owner Password Credentials Grant 방식을 사용할 수 있습니다. 이 문서에서는 Authorization Code Grant 로 AccessToken 을 획득합니다.
+
+[좀 더 자세히 알아보려면 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md)
+
 #### Authorization Code 부여
 AccessToken 을 획득하기 위해 Authorization Code 가 필요합니다. 아래 지침을 따르십시오.
 
@@ -80,8 +84,10 @@ redirect_uri : (필수) Authorization Code 와 함께 redirect 될 URI
 
 사용자가 요청을 수락하면 URL 에 "code" 가 포함된 redirect_uri 사이트로 리디렉션됩니다.
 ```
-
+REDIRECT URL : {REDIRECT_URI}/?code={AUTHORIZATION_CODE}
+Example : https://thingplus.net/?code=FKr1INPriNvGcMEC
 ```
+
 
 #### AccessToken 획득
 Postman 에서 다음 API를 이용하여 AccessToken 을 획득합니다.
@@ -91,12 +97,16 @@ Method : POST
 Content-Type : x-www-form-urlencoded
 Body
  - code : 획득한 Authorization Code
- - client_id :
- - client_secret :
+ - client_id : 등록한 OAuth client
+ - client_secret : 등록한 OAuth client secret
  - redirect_uri : https://thingplus.net
  - grant_type : authorization_code
 ```
 
+x-www-form-urlencoded 예시
+```
+code :
+```
 ### API 키 발급
 
 ### 하드웨어에 Gateway 설치
