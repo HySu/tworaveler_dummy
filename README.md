@@ -1,11 +1,11 @@
 # Thing+ REST API
  가장 간단하고 편리한 방법을 기술한다.
 ## 개요
-Thing+ REST API 는 누구나 Client 를 등록하고 AccessToken을 획득하여 Gateway / Device / Sensor 를 등록하고 Thing+ 서비스를 사용할 수 있게 합니다.
+Thing+ REST API 는 누구나 client 를 등록하고 AccessToken을 획득하여 Gateway / Device / Sensor 를 등록하고 Thing+ 서비스를 사용할 수 있게 합니다.
 
-사용자는 Thing+ Server 에 client 를 등록하고 AccessToken 를 획득해 Gateway / Device / Sensor 를 관리하고 SensorData 에 접근할 자격을 얻습니다.
+Thing+ Cloud 는 사용자 정보와 서비스를 관리하고 센서 데이터를 제공합니다.
 
-또한 사용자는 Thing+ Portal 에서 API 키를 발급하여 하드웨어에 Gateway 를 설치하고 Thing+ Server 에 SensorData 를 송수신하도록 합니다.
+또한 사용자는 Thing+ Portal 에서 API 키를 발급하여 하드웨어에 Gateway 를 설치하고 Thing+ Cloud 에 센서 데이터를 송수신하도록 합니다.
 
 Thing+ 서비스를 이용하려면 다음 조건을 충족해야합니다.
 * client 등록
@@ -15,7 +15,8 @@ Thing+ 서비스를 이용하려면 다음 조건을 충족해야합니다.
 * Gateway / Device / Sensor 등록
 
 ### 중요 공지
-이 문서에는 Thing+ REST API 연동을 위한 가이드가 들어 있습니다. Thing+ REST API 전체 문서를 찾으려면 [https://thingplus.api-docs.io/](https://thingplus.api-docs.io/) 를 참조하십시오.
+이 문서에는 Thing+ REST API 연동을 위한 가이드가 들어 있습니다.
+Thing+ REST API 전체 문서를 찾으려면 [https://thingplus.api-docs.io/](https://thingplus.api-docs.io/) 를 참조하십시오.
 Thing+ 기본 가이드 문서를 찾으려면 [http://support.thingplus.net/](http://support.thingplus.net/)를 참조하십시오.
 
 ## 등록
