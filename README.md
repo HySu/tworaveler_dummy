@@ -36,7 +36,7 @@ Thing+ Supporter 는 Thing+ Portal 과 Thing+ REST API 를 이용한 등록과�
 
 Postman 을 실행하고, Postman Interceptor 를 on 한 상태에서 설정할 값을 입력한 다음 API를 호출합니다. [Getting Started with the Thing+ REST APIs](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStarted_authToken.md) 문서를 참고하면 편리합니다.
 
-``
+```
 URL : https://api.thingplus.net/v2/authClients
 Method : POST
 Content-Type : application/json
@@ -45,7 +45,7 @@ Body
  - reqId : ID(AccessToken 획득시 필요)
  - clientSecret : secret 키(AccessToken 획득시 필요)
  - scopes : 부여할 권한([scopes 범위 참조](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes))
-``
+```
 
 ### AccessToken 획득
 
