@@ -61,6 +61,40 @@ Body 예시
 [scopes 범위는 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#scopes)
 
 ### AccessToken 획득
+#### Authorization Code 부여
+AccessToken 을 획득하기 위해 Authorization Code 가 필요합니다. 아래 지침을 따르십시오.
+
+웹 브라우저로 아래 URL 을 get 하여 redirect_uri 에 부여된 Authorization 코드를 획득 합니다.
+
+URL Query 파라미터
+```
+client_id : (필수) 등록한 OAuth client reqId
+response_type : (필수) "code" 를 사용
+redirect_uri : (필수) Authorization Code 와 함께 redirect 될 URI
+
+```
+
+> 상용 서버
+```
+GET URL : https://api.thingplus.net/v2/oauth2/authorize
+Example : https://api.thingplus.net/v2/oauth2/authorize?client_id=daliworks512&response_type=code&redirect_uri=https://thingplus.net
+```
+
+
+
+#### AccessToken 획득
+Postman 에서 다음 API를 이용하여 AccessToken 을 획득합니다.
+```
+URL : https://api.thingplus.net/v2/oauth2/token
+Method : POST
+Content-Type : x-www-form-urlencoded
+Body
+ - code : 획득한 Authorization Code
+ - client_id :
+ - client_secret :
+ - redirect_uri : https://thingplus.net
+ - grant_type : authorization_code
+```
 
 ### API 키 발급
 
