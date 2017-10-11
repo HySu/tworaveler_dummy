@@ -35,6 +35,7 @@ Thing+ Supporter 는 Thing+ Portal 과 Thing+ REST API 를 이용한 등록과�
 * [Postman Interceptor](https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo?hl=en)
 
 Postman 을 실행하고, Postman Interceptor 를 on 한 상태에서 설정할 값을 입력한 다음 API를 호출합니다.
+
 [Getting Started with the Thing+ REST APIs](https://github.com/daliworks/thingplus-guide/blob/master/doc/GettingStarted_authToken.md) 문서를 참고하면 편리합니다.
 
 ```
