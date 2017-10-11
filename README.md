@@ -103,13 +103,28 @@ Body
  - grant_type : authorization_code
 ```
 
-x-www-form-urlencoded 예시
+x-www-form-urlencoded POST 예시
 ```
 code : FKr1INPriNvGcMEC
 client_id : daliworks512
 client_secret : gali1234
 redirect_uri : https://thingplus.net
 grant_type : authorization_code
+```
+
+획득한 access_token
+```
+{
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI3MzY3IiwiY2xpZW50SWQiOiJkYWxpd29ya3M1MTIiLCJpYXQiOjE1MDc3MTA4NDYsImV4cCI6MTUwOTAwNjg0Nn0.wmr6MdEDJo5qk4i5EYn34epxRmn9BQq_Nt74AfNCSMc",
+    "token_type": "Bearer"
+}
+```
+
+획득한 AccessToken 은 Thing+ REST API 를 호출할 때 권한 인증을 위해 Header에 있어야합니다.
+
+Header 에 Authorization 필드를 추가하고, token_type과 access_token 값을 아래와 같이 입력해주십시오.
+```
+Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiI3MzY3IiwiY2xpZW50SWQiOiJkYWxpd29ya3M1MTIiLCJpYXQiOjE1MDc3MTA4NDYsImV4cCI6MTUwOTAwNjg0Nn0.wmr6MdEDJo5qk4i5EYn34epxRmn9BQq_Nt74AfNCSMc
 ```
 
 [이 과정에서 문제가 발생하면 이 문서를 참조하십시오.](https://github.com/daliworks/thingplus-guide/blob/master/doc/OAuth2.md#authorization-code-grant-or-web-server)
